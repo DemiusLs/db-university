@@ -30,7 +30,7 @@ WHERE  `period` = "I semestre" AND `year` = 1
 20/06/2020 (21)
 SELECT *
 FROM `exams`
-WHERE  `hour` > "14:00" AND `date` = "2020/06/20"
+WHERE  `hour` > "14:00:00" AND `date` = "2020/06/20"
 
 
 6. Selezionare tutti i corsi di laurea magistrale (38)
@@ -47,4 +47,4 @@ FROM `departments`
 8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
 SELECT COUNT(*)
 FROM `teachers`
-WHERE   ISNULL(`phone`)
+WHERE   `phone` IS NULL
